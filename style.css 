@@ -1,0 +1,271 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#020412;
+overflow-x:hidden;
+color:white;
+}
+
+/* Animated Galaxy */
+
+#stars{
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+z-index:-2;
+background:
+radial-gradient(white 1px,transparent 1px),
+radial-gradient(white 1px,transparent 1px),
+linear-gradient(#050816,#090b1d,#000);
+background-size:120px 120px,180px 180px,100% 100%;
+animation:starsMove 80s linear infinite;
+}
+
+@keyframes starsMove{
+from{
+background-position:0 0,0 0,0 0;
+}
+to{
+background-position:1000px 500px,-800px 400px,0 0;
+}
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+position:relative;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.35);
+backdrop-filter:blur(2px);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:900px;
+padding:40px;
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.15);
+border-radius:30px;
+backdrop-filter:blur(18px);
+box-shadow:0 0 40px rgba(0,180,255,.25);
+}
+
+.hero h1{
+font-size:72px;
+font-family:'Great Vibes',cursive;
+margin-bottom:10px;
+color:#fff;
+text-shadow:0 0 20px #6fd3ff;
+}
+
+.hero h2{
+font-size:24px;
+letter-spacing:3px;
+color:#9bdfff;
+margin-bottom:10px;
+}
+
+.hero h3{
+font-size:34px;
+margin-bottom:20px;
+color:#ffd6f3;
+}
+
+.tagline{
+font-size:20px;
+opacity:.9;
+margin-bottom:35px;
+}
+
+#countdown{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:35px;
+}
+
+.time{
+width:110px;
+height:110px;
+border-radius:25px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+box-shadow:0 0 20px rgba(255,255,255,.08);
+}
+
+.time span{
+font-size:34px;
+font-weight:bold;
+color:#8ee8ff;
+}
+
+.time p{
+margin-top:5px;
+font-size:14px;
+opacity:.8;
+}
+
+#startBtn{
+padding:18px 45px;
+border:none;
+border-radius:50px;
+background:linear-gradient(135deg,#ff4f91,#8f5dff);
+color:white;
+font-size:20px;
+cursor:pointer;
+transition:.35s;
+box-shadow:0 0 25px rgba(255,0,150,.45);
+}
+
+#startBtn:hover{
+transform:translateY(-4px) scale(1.05);
+box-shadow:0 0 40px rgba(255,0,180,.7);
+}
+/* STORY */
+
+#story{
+padding:80px 20px;
+}
+
+.storyTitle{
+text-align:center;
+font-size:58px;
+font-family:'Great Vibes',cursive;
+margin-bottom:50px;
+color:#ffffff;
+text-shadow:0 0 15px #87cefa;
+}
+
+.letter{
+max-width:850px;
+margin:auto;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+padding:45px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.12);
+box-shadow:0 0 30px rgba(255,255,255,.08);
+}
+
+.letter p{
+font-size:22px;
+line-height:2;
+margin-bottom:25px;
+opacity:.95;
+animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* PHOTO GALLERY */
+
+.gallery{
+padding:100px 20px;
+text-align:center;
+}
+
+.gallery h2{
+font-size:50px;
+font-family:'Great Vibes',cursive;
+margin-bottom:45px;
+}
+
+.photos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+max-width:1100px;
+margin:auto;
+}
+
+.photos img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:25px;
+transition:.4s;
+box-shadow:0 0 25px rgba(255,255,255,.12);
+}
+
+.photos img:hover{
+transform:scale(1.05);
+box-shadow:0 0 35px #ff7eb3;
+}
+
+/* CAKE */
+
+.cakeSection{
+padding:100px 20px;
+text-align:center;
+}
+
+.cakeSection h2{
+font-size:50px;
+font-family:'Great Vibes',cursive;
+margin-bottom:45px;
+}
+
+.cake{
+margin:40px auto;
+position:relative;
+width:220px;
+height:240px;
+}
+
+.layer{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+border-radius:18px;
+}
+
+.layer1{
+bottom:0;
+width:220px;
+height:70px;
+background:#ffb3c7;
+}
+
+.layer2{
+bottom:70px;
+width:180px;
+height:60px;
+background:#ffc8dd;
+}
+
+.layer3{
+bottom:130px;
