@@ -1,6 +1,5 @@
 // Countdown (27 July, 12:00 AM)
-const birthday = new Date("July 27, 2026 00:00:00").getTime();
-
+const birthday = new Date("July 27, 2026 23:59:59").getTime();
 const timer = setInterval(() => {
 
 const now = new Date().getTime();
